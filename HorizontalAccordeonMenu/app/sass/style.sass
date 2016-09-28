@@ -1,0 +1,108 @@
+@import "helpers/fonts" //подключение шрифтов
+@import "helpers/common"
+
+.content
+    margin: 15px
+// боковая панель
+.sidebar
+    float: left
+    text-align: center
+    box-shadow: 25px 0px 50px 0px rgba(74, 74, 74, 0.42)
+    &__logo
+        margin-top: 55px
+    &__footer
+        margin-top: 545px
+        font-size: 11px
+        padding: 6px 15px
+    &__lang
+        margin-top: 20px
+
+// раскрывающееся меню в виде списка
+.navigation
+    width: 1183px
+    height: 785px
+    overflow: hidden
+    margin: 5px 10px
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35)
+    -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35)
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35)
+    &__menu
+        width: 2000px
+    &__menu:hover   &__item
+            width: 158px
+    &__item
+        display: inline-block
+        border: 1px solid #fff
+        height: 745px
+        background-color: #e9eaec
+        //position: relative
+        width: 195px
+        float: left
+        border-left: 1px solid #888
+        -webkit-box-shadow: 0 0 55px 7px rgba(0, 0, 0, 0.5)
+        -moz-box-shadow: 0 0 55px 7px rgba(0, 0, 0, 0.5)
+        box-shadow: 0 0 55px 7px rgba(0, 0, 0, 0.5)
+        /* Создание анимации с помощью переходов */
+        -webkit-transition: all 0.5s
+        -moz-transition: all 0.5s
+        transition: all 0.5s
+    &__item:hover > .header > .header__icon
+        /*background-position: 18px -52px;*/
+        transform: rotateY(180deg)
+        background-color: transparent
+        transition: all 0.5s linear
+    &__menu &__item:hover
+        width: 380px
+        color: #fff
+        background-image: url("../img/transport_active.png")
+        transition: all .5s linear
+
+// область с икокой и заголовком пункта мееню
+.header
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    &__title
+        text-align: center
+        display: inline-block
+        font-size: 15px
+        margin: 10px auto
+        height: 48px
+        width: 115px
+        vertical-align: top
+    &__link
+        color: #5e6738
+        text-decoration:  none
+    &__link:hover
+        color: #FFFFFF
+    &__icon
+        text-align: center
+        display: inline-block
+        vertical-align: middle
+        margin-top: 86px
+        margin-left: 48px
+        margin-right: 48px
+        margin-bottom: 40px
+        border-radius: 50%
+        border: 1px #FFF solid
+        width: 94px
+        height: 94px
+        &_transport
+            background: url("../img/icons/sprites/transport.png") #FFF center no-repeat
+            background-position: 18px 18px
+        &_about
+            background: url("../img/icons/sprites/about.png") #FFF center no-repeat
+            background-position: 17px 17px
+        &_contacts
+            background: url("../img/icons/sprites/contacts.png") #FFF center no-repeat
+            background-position: 18px 20px
+        &_control
+            background: url("../img/icons/sprites/control.png") #FFF center no-repeat
+            background-position: 18px 24px
+        &_eko
+            background: url("../img/icons/sprites/eko.png") #FFF center no-repeat
+            background-position: 17px 17px
+        &_production
+            background: url("../img/icons/sprites/production.png") #FFF center no-repeat
+            background-position: 16px 22px
